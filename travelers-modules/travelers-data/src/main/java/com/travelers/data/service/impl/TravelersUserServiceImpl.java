@@ -1,17 +1,17 @@
-package com.travelers.system.service.impl;
+package com.travelers.data.service.impl;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.travelers.system.mapper.TravelersUserMapper;
-import com.travelers.system.domain.TravelersUser;
-import com.travelers.system.service.ITravelersUserService;
+import com.travelers.data.mapper.TravelersUserMapper;
+import com.travelers.data.domain.TravelersUser;
+import com.travelers.data.service.ITravelersUserService;
 
 /**
- * 旅行家系统用户模块Service业务层处理
+ * 旅行家系统数据模块-用户表Service业务层处理
  * 
  * @author pinanoria
- * @date 2023-06-21
+ * @date 2023-06-23
  */
 @Service
 public class TravelersUserServiceImpl implements ITravelersUserService 
@@ -20,10 +20,10 @@ public class TravelersUserServiceImpl implements ITravelersUserService
     private TravelersUserMapper travelersUserMapper;
 
     /**
-     * 查询旅行家系统用户模块
+     * 查询旅行家系统数据模块-用户表
      * 
-     * @param UserID 旅行家系统用户模块主键
-     * @return 旅行家系统用户模块
+     * @param UserID 旅行家系统数据模块-用户表主键
+     * @return 旅行家系统数据模块-用户表
      */
     @Override
     public TravelersUser selectTravelersUserByUserID(Long UserID)
@@ -32,10 +32,10 @@ public class TravelersUserServiceImpl implements ITravelersUserService
     }
 
     /**
-     * 查询旅行家系统用户模块列表
+     * 查询旅行家系统数据模块-用户表列表
      * 
-     * @param travelersUser 旅行家系统用户模块
-     * @return 旅行家系统用户模块
+     * @param travelersUser 旅行家系统数据模块-用户表
+     * @return 旅行家系统数据模块-用户表
      */
     @Override
     public List<TravelersUser> selectTravelersUserList(TravelersUser travelersUser)
@@ -44,9 +44,9 @@ public class TravelersUserServiceImpl implements ITravelersUserService
     }
 
     /**
-     * 新增旅行家系统用户模块
+     * 新增旅行家系统数据模块-用户表
      * 
-     * @param travelersUser 旅行家系统用户模块
+     * @param travelersUser 旅行家系统数据模块-用户表
      * @return 结果
      */
     @Override
@@ -56,9 +56,9 @@ public class TravelersUserServiceImpl implements ITravelersUserService
     }
 
     /**
-     * 修改旅行家系统用户模块
+     * 修改旅行家系统数据模块-用户表
      * 
-     * @param travelersUser 旅行家系统用户模块
+     * @param travelersUser 旅行家系统数据模块-用户表
      * @return 结果
      */
     @Override
@@ -68,9 +68,9 @@ public class TravelersUserServiceImpl implements ITravelersUserService
     }
 
     /**
-     * 批量删除旅行家系统用户模块
+     * 批量删除旅行家系统数据模块-用户表
      * 
-     * @param UserIDs 需要删除的旅行家系统用户模块主键
+     * @param UserIDs 需要删除的旅行家系统数据模块-用户表主键
      * @return 结果
      */
     @Override
@@ -80,9 +80,9 @@ public class TravelersUserServiceImpl implements ITravelersUserService
     }
 
     /**
-     * 删除旅行家系统用户模块信息
+     * 删除旅行家系统数据模块-用户表信息
      * 
-     * @param UserID 旅行家系统用户模块主键
+     * @param UserID 旅行家系统数据模块-用户表主键
      * @return 结果
      */
     @Override

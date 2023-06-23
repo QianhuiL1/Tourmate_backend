@@ -7,19 +7,17 @@
         <version>3.6.2</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+    <version>3.6.2</version>
 
     <modules>
-        <module>ruoyi-system</module>
-        <module>ruoyi-gen</module>
-        <module>ruoyi-job</module>
-        <module>ruoyi-file</module>
+        <module>travelers-data</module>
     </modules>
 
-    <artifactId>ruoyi-modules</artifactId>
+    <artifactId>travelers-modules</artifactId>
     <packaging>pom</packaging>
 
     <description>
-        ruoyi-modules业务模块
+        travelers-业务模块
     </description>
 
 </project>

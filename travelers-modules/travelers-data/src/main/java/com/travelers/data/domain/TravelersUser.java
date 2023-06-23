@@ -1,4 +1,4 @@
-package com.travelers.system.domain;
+package com.travelers.data.domain;
 
 import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -8,10 +8,10 @@ import com.ruoyi.common.core.annotation.Excel;
 import com.ruoyi.common.core.web.domain.BaseEntity;
 
 /**
- * 旅行家系统用户模块对象 user
+ * 旅行家系统数据模块-用户表对象 user
  * 
  * @author pinanoria
- * @date 2023-06-21
+ * @date 2023-06-23
  */
 public class TravelersUser extends BaseEntity
 {

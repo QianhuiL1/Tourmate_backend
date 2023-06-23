@@ -1,4 +1,4 @@
-package com.travelers.system.controller;
+package com.travelers.data.controller;
 
 import java.util.List;
 import java.io.IOException;
@@ -15,18 +15,18 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ruoyi.common.log.annotation.Log;
 import com.ruoyi.common.log.enums.BusinessType;
 import com.ruoyi.common.security.annotation.RequiresPermissions;
-import com.travelers.system.domain.TravelersUser;
-import com.travelers.system.service.ITravelersUserService;
+import com.travelers.data.domain.TravelersUser;
+import com.travelers.data.service.ITravelersUserService;
 import com.ruoyi.common.core.web.controller.BaseController;
 import com.ruoyi.common.core.web.domain.AjaxResult;
 import com.ruoyi.common.core.utils.poi.ExcelUtil;
 import com.ruoyi.common.core.web.page.TableDataInfo;
 
 /**
- * 旅行家系统用户模块Controller
+ * 旅行家系统数据模块-用户表Controller
  * 
  * @author pinanoria
- * @date 2023-06-21
+ * @date 2023-06-23
  */
 @RestController
 @RequestMapping("/TravelersUser")
@@ -36,9 +36,9 @@ public class TravelersUserController extends BaseController
     private ITravelersUserService travelersUserService;
 
     /**
-     * 查询旅行家系统用户模块列表
+     * 查询旅行家系统数据模块-用户表列表
      */
-    @RequiresPermissions("system:TravelersUser:list")
+    @RequiresPermissions("data:TravelersUser:list")
     @GetMapping("/list")
     public TableDataInfo list(TravelersUser travelersUser)
     {
@@ -48,22 +48,22 @@ public class TravelersUserController extends BaseController
     }
 
     /**
-     * 导出旅行家系统用户模块列表
+     * 导出旅行家系统数据模块-用户表列表
      */
-    @RequiresPermissions("system:TravelersUser:export")
-    @Log(title = "旅行家系统用户模块", businessType = BusinessType.EXPORT)
+    @RequiresPermissions("data:TravelersUser:export")
+    @Log(title = "旅行家系统数据模块-用户表", businessType = BusinessType.EXPORT)
     @PostMapping("/export")
     public void export(HttpServletResponse response, TravelersUser travelersUser)
     {
         List<TravelersUser> list = travelersUserService.selectTravelersUserList(travelersUser);
         ExcelUtil<TravelersUser> util = new ExcelUtil<TravelersUser>(TravelersUser.class);
-        util.exportExcel(response, list, "旅行家系统用户模块数据");
+        util.exportExcel(response, list, "旅行家系统数据模块-用户表数据");
     }
 
     /**
-     * 获取旅行家系统用户模块详细信息
+     * 获取旅行家系统数据模块-用户表详细信息
      */
-    @RequiresPermissions("system:TravelersUser:query")
+    @RequiresPermissions("data:TravelersUser:query")
     @GetMapping(value = "/{UserID}")
     public AjaxResult getInfo(@PathVariable("UserID") Long UserID)
     {
@@ -71,10 +71,10 @@ public class TravelersUserController extends BaseController
     }
 
     /**
-     * 新增旅行家系统用户模块
+     * 新增旅行家系统数据模块-用户表
      */
-    @RequiresPermissions("system:TravelersUser:add")
-    @Log(title = "旅行家系统用户模块", businessType = BusinessType.INSERT)
+    @RequiresPermissions("data:TravelersUser:add")
+    @Log(title = "旅行家系统数据模块-用户表", businessType = BusinessType.INSERT)
     @PostMapping
     public AjaxResult add(@RequestBody TravelersUser travelersUser)
     {
@@ -82,10 +82,10 @@ public class TravelersUserController extends BaseController
     }
 
     /**
-     * 修改旅行家系统用户模块
+     * 修改旅行家系统数据模块-用户表
      */
-    @RequiresPermissions("system:TravelersUser:edit")
-    @Log(title = "旅行家系统用户模块", businessType = BusinessType.UPDATE)
+    @RequiresPermissions("data:TravelersUser:edit")
+    @Log(title = "旅行家系统数据模块-用户表", businessType = BusinessType.UPDATE)
     @PutMapping
     public AjaxResult edit(@RequestBody TravelersUser travelersUser)
     {
@@ -93,10 +93,10 @@ public class TravelersUserController extends BaseController
     }
 
     /**
-     * 删除旅行家系统用户模块
+     * 删除旅行家系统数据模块-用户表
      */
-    @RequiresPermissions("system:TravelersUser:remove")
-    @Log(title = "旅行家系统用户模块", businessType = BusinessType.DELETE)
+    @RequiresPermissions("data:TravelersUser:remove")
+    @Log(title = "旅行家系统数据模块-用户表", businessType = BusinessType.DELETE)
 	@DeleteMapping("/{UserIDs}")
     public AjaxResult remove(@PathVariable Long[] UserIDs)
     {

@@ -1,4 +1,4 @@
-package com.travelers.system;
+package com.travelers.data;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,20 +7,20 @@ import com.ruoyi.common.security.annotation.EnableRyFeignClients;
 import com.ruoyi.common.swagger.annotation.EnableCustomSwagger2;
 
 /**
- * 系统模块
+ * 旅行家-数据模块
  *
- * @author ruoyi
+ * @author pinanoria
  */
 @EnableCustomConfig
 @EnableCustomSwagger2
 @EnableRyFeignClients
 @SpringBootApplication
-public class TravelersSystemApplication
+public class TravelersDataApplication
 {
     public static void main(String[] args)
     {
-        SpringApplication.run(TravelersSystemApplication.class, args);
-        System.out.println("(♥◠‿◠)ﾉﾞ  旅行家系统模块启动成功   ლ(´ڡ`ლ)ﾞ  \n" +
+        SpringApplication.run(TravelersDataApplication.class, args);
+        System.out.println("(♥◠‿◠)ﾉﾞ  数据模块启动成功   ლ(´ڡ`ლ)ﾞ  \n" +
                 " .-------.       ____     __        \n" +
                 " |  _ _   \\      \\   \\   /  /    \n" +
                 " | ( ' )  |       \\  _. /  '       \n" +
