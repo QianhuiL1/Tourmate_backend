@@ -15,7 +15,7 @@ public class ServiceNameConstants
     /**
      * 系统模块的serviceid
      */
-    public static final String SYSTEM_SERVICE = "ruoyi-system";
+    public static final String SYSTEM_SERVICE = "tourmate-system";
 
     /**
      * 文件服务的serviceid

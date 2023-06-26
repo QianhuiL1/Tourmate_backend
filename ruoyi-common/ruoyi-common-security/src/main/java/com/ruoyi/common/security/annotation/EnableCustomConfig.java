@@ -21,7 +21,7 @@ import com.ruoyi.common.security.feign.FeignAutoConfiguration;
 @EnableAspectJAutoProxy(exposeProxy = true)
 // 指定要扫描的Mapper类的包的路径
 @MapperScan("com.ruoyi.**.mapper")
-@MapperScan("com.travelers.**.mapper")
+@MapperScan("com.tourmate.**.mapper")
 // 开启线程异步执行
 @EnableAsync
 // 自动加载类

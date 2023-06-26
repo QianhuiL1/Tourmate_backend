@@ -7,18 +7,17 @@
         <version>3.6.2</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+    <version>3.6.2</version>
 
     <modules>
-        <module>ruoyi-gen</module>
-        <module>ruoyi-job</module>
-        <module>ruoyi-file</module>
+        <module>tourmate-system</module>
     </modules>
 
-    <artifactId>ruoyi-modules</artifactId>
+    <artifactId>tourmate-modules</artifactId>
     <packaging>pom</packaging>
 
     <description>
-        ruoyi-modules业务模块
+        tourmate-业务模块
     </description>
 
 </project>
