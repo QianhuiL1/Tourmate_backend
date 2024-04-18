@@ -1,4 +1,4 @@
-# Tourmate —— Data-Driven Tourism Service System
+# Tourmate — Data-Driven Tourism Service System (Back-end)
 
 ## Introduction
 Tourmate is a comprehensive travel service platform powered by big data analytics to enhance travel experience. The system integrates sophisticated features for tourist attraction recommendations, personalized travel planning, and community interaction, all facilitated by an advanced microservice architecture.
