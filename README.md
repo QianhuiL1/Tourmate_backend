@@ -91,7 +91,31 @@ The path planning aspect of the algorithm involves:
 - **Optimal Path Derivation:** Breaks down the best paths into daily travel plans based on optimal visit times and attraction durations.
 
 ## Database Design
-<img src="img/database.png"/>
+<img src="img/E-R.png"/>
+
+The database features several interconnected entities that describe the platform’s functionality.
+
+- **User**: This is a central entity that interacts with various aspects of the system. A user can have multiple browser histories, can post many times, and can save multiple attractions and plans. Each user can view numerous hot attractions and trips and send many comments.
+
+- **BrowserHistory**: Captures the users' browsing sessions. A user can have many browser history records, which are not directly linked to any other entities except the User.
+
+- **Attraction**: These are the points of interest that users can view. Each attraction can be included in many attraction collections, and it can connect to many plan collections, indicating that attractions are grouped and included in various travel plans.
+
+- **AttrCollection**: This represents collections of attractions that a user can create and save. An attraction collection can include many different attractions.
+
+- **PlanCollection**: Similar to AttrCollection, this entity represents the collections of plans. It suggests that a plan collection can involve multiple attractions and that users can view and save these collections.
+
+- **HotTrip**: Represents highlighted or featured trips on the platform. Users can view multiple hot trips, indicating these are selected trips showcased to users for their quality or popularity.
+
+- **HotAttraction**: These are the attractions that are currently trending or popular. Like HotTrip, they can be viewed by users and are likely featured prominently on the platform.
+
+- **HotNews**: This entity represents news articles or updates that are of particular interest to the community. Each piece of hot news can be commented on by users, indicating an interactive aspect of the platform where news can be discussed.
+
+- **Post**: Reflects the posts made by users on the platform. Each post can include multiple comments and likes, suggesting an interactive social feature where users can engage with content through comments and expressions of interest.
+
+- **Comment**: Represents comments that users can send on posts or hot news, facilitating discussion and interaction on the platform.
+
+- **Like**: This entity tracks likes on posts, which allows users to express their preferences and engagement with the content.
 
 ### Prerequisites
 - Java 8+
